@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Real-Time Voice Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="chat-app">
+        <header>
+            <h1>🗣️ Voice Chat App</h1>
+            <p>Real-time chat with voice command support</p>
+        </header>
+
+        <main>
+            <div id="chat-box"></div>
+
+            <div id="chat-controls">
+                <input type="text" id="chat-input" placeholder="Type a message..." />
+                <input type="file" id="file-input" accept="image/*,video/*" />
+                <button id="send-btn">Send</button>
+                <button id="voice-btn">🎤 Voice</button>
+                
+
+
+
+
+                <button id="camera-btn">📸 Camera</button>
+<video id="preview" autoplay style="display:none;"></video>
+<canvas id="snapshot" style="display:none;"></canvas>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Socket.IO -->
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+

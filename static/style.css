@@ -1,0 +1,140 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #f4f7f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Chat App Container */
+#chat-app {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background-color: #4a90e2;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* Main Chat Area */
+main {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#chat-box {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fdfdfd;
+}
+
+.message {
+    margin-bottom: 12px;
+    padding: 8px 12px;
+    background: #e6f0fa;
+    border-radius: 8px;
+    max-width: 90%;
+    word-wrap: break-word;
+}
+
+.message strong {
+    color: #2c3e50;
+}
+
+/* Input and Buttons */
+#chat-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#chat-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+#file-input {
+    flex: 1;
+    font-size: 14px;
+}
+
+button {
+    padding: 10px 14px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #357ab7;
+}
+
+/* Camera Preview */
+#preview {
+    width: 100%;
+    max-width: 250px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+canvas {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    #chat-app {
+        width: 100%;
+        margin: 10px;
+    }
+
+    #chat-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #chat-input, #file-input, button {
+        width: 100%;
+    }
+}

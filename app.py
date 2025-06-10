@@ -98,15 +98,14 @@
 
 
 
+import eventlet
+eventlet.monkey_patch()
+
 from flask import Flask, render_template
 from flask_socketio import SocketIO, emit
 from pymongo import MongoClient, errors
 import datetime
 import os
-
-# If using eventlet, import it and monkey patch
-import eventlet
-eventlet.monkey_patch()
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your_secret_key'
